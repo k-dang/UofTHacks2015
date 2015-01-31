@@ -1,7 +1,32 @@
 <?php
-	
     header("content-type: text/xml");
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+// define location of Parse PHP SDK, e.g. location in "Parse" folder
+// Defaults to ./Parse/ folder. Add trailing slash
+
+define( 'PARSE_SDK_DIR', './Parse/' );
+
+// include Parse SDK autoloader
+require_once( '../vendor/autoload.php' );
+
+// Add the "use" declarations where you'll be using the classes
+use Parse\ParseClient;
+use Parse\ParseObject;
+use Parse\ParseQuery;
+use Parse\ParseACL;
+use Parse\ParsePush;
+use Parse\ParseUser;
+use Parse\ParseInstallation;
+use Parse\ParseException;
+use Parse\ParseAnalytics;
+use Parse\ParseFile;
+use Parse\ParseCloud;
+
+// Init parse: app_id, rest_key, master_key
+// ParseClient::initialize('xxx', 'yyy', 'zzz');
+ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2sR1v3AgukRwWiBxDkVGnDzX5PPMGpF', '5iSGiI2WrdqmQ1XXUUzfVHZUMemE9cEE3WEE93LN');
+
+
 
 	$curl = curl_init();
 		// Set some options - we are passing in a useragent too here
@@ -15,15 +40,34 @@
 	// Close request to clear up some resources
 	curl_close($curl);
 
-	$results = json_decode($resp);
+	// save something to class TestObject
+	$testObject = ParseObject::create("User");
+	$testObject->set($_REQUEST['From'], $_REQUEST['Body']);
+	$testObject->save();
 
-	$string = "";
-	foreach ($results as $key => $com){
-		$string.=$key." ".$com."|";
-	}
+	// // get the object ID
+	// echo $testObject->getObjectId();
 
-	//echo $resp;
-?>
-<Response>
-    <Message><?php echo $string ?></Message>
-</Response>
+	// echo '<h1>Users</h1>';
+
+	// // get the first 10 users from built-in User class
+	// $query = new ParseQuery("_User");
+	// $query->limit(10);
+	// $results = $query->find();
+
+	// foreach ( $results as $result ) {
+	//   // echo user Usernames
+	//   echo $result->get('username') . '<br/>';
+	// }
+	// 	$results = json_decode($resp);
+
+	// 	$string = "";
+	// 	foreach ($results as $key => $com){
+	// 		$string.=$key." ".$com."|";
+	// 	}
+
+		//echo $resp;
+	?>
+	<Response>
+	    <Message><?php echo $string ?></Message>
+	</Response>

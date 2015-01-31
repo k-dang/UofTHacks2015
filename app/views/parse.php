@@ -25,7 +25,7 @@ use Parse\ParseCloud;
 ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2sR1v3AgukRwWiBxDkVGnDzX5PPMGpF', '5iSGiI2WrdqmQ1XXUUzfVHZUMemE9cEE3WEE93LN');
 
 // save something to class TestObject
-$testObject = ParseObject::create("TestObject");
+$testObject = ParseObject::create("User");
 $testObject->set("foo", "bar");
 $testObject->save();
 
