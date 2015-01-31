@@ -7,7 +7,7 @@
 define( 'PARSE_SDK_DIR', './Parse/' );
 
 // include Parse SDK autoloader
-require_once( 'vendor/autoload.php' );
+require_once( '../vendor/autoload.php' );
 
 // Add the "use" declarations where you'll be using the classes
 use Parse\ParseClient;
