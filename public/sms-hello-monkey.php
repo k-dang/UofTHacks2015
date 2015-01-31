@@ -16,11 +16,15 @@
 
 	$results = json_decode($resp);
 
+	$string = "";
+	foreach ($com as $key => $results){
+		$string.=$key." ".$results."|"
+
+
+	}
 
 	//echo $resp;
-
-
 ?>
 <Response>
-    <Message><?php echo $results->YHOO ?></Message>
+    <Message><?php echo $string ?></Message>
 </Response>
