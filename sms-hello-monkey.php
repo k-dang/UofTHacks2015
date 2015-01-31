@@ -19,5 +19,5 @@
 
 ?>
 <Response>
-    <Message>Hello my name is, <?php echo $results ?></Message>
+    <Message>Hello my name is, <?php echo "Hi" ?></Message>
 </Response>
