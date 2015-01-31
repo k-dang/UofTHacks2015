@@ -15,11 +15,12 @@
 	curl_close($curl);
 
 	$results = json_decode($resp);
-	
+
+
 	//echo $resp;
 
 
 ?>
 <Response>
-    <Message>Hello my name is, <?php echo $results ?></Message>
+    <Message><?php echo $results->YHOO ?></Message>
 </Response>
