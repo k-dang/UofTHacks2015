@@ -26,8 +26,10 @@
 	// ParseClient::initialize('xxx', 'yyy', 'zzz');
 	ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2sR1v3AgukRwWiBxDkVGnDzX5PPMGpF', '5iSGiI2WrdqmQ1XXUUzfVHZUMemE9cEE3WEE93LN');
 
-
-		if(strpos((String)$_REQUEST['Body'],'sub') == false){
+		$input = (String)$_REQUEST['Body']);
+		$findme = 'sub';
+		$pos = strpos($input,$findme);
+		if($pos === false){
 			$curl = curl_init();
 				// Set some options - we are passing in a useragent too here
 			curl_setopt_array($curl, array(
@@ -42,7 +44,8 @@
 					$results = json_decode($resp);
 
 				$string = "";
-				foreach ($results as $key => $com){
+				foreach ($results as $key => $com)
+				{
 					$string.=$key." ".$com."|";
 				}
 		}
