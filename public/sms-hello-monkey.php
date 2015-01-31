@@ -72,9 +72,7 @@
 		//   echo $result->get('username') . '<br/>';
 		// }
 
-
-			//echo $resp;
-		?>
+?>
 		<Response>
 		    <Message><?php echo $string ?></Message>
 		</Response>
