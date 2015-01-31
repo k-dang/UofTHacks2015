@@ -42,7 +42,8 @@ ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2s
 
 	// save something to class TestObject
 	$testObject = ParseObject::create("TestObject");
-	$testObject->set((String)$_REQUEST['From'], (String)$_REQUEST['Body']);
+	$testObject->set("foo", (String)$_REQUEST['Body']);
+	$testObject->set("fo32313o", (String)$_REQUEST['From']);
 	$testObject->save();
 
 	// // get the object ID
