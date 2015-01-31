@@ -78,9 +78,9 @@
 		// }
 
 ?>
-		<Response>
-		    <Message>
-		    	<Body><?php echo $string ?></Body>
-		    	<MediaUrl>https://demo.twilio.com/owl.png</MediaUrl>
-		    </Message>
-		</Response>
+<Response>
+    <Message>
+    	<Body><?php echo $string ?></Body>
+    	<Media>https://demo.twilio.com/owl.png</Media>
+    </Message>
+</Response>
