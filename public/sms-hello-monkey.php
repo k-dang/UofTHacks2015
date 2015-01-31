@@ -53,7 +53,7 @@
 		else
 		{
 			// save something to class TestObject
-			$testObject = ParseObject::create("User Subscription");
+			$testObject = ParseObject::create("TestObject");
 			$testObject->set("Number", (String)$_REQUEST['From']);
 			$testObject->set("Body", ltrim($input,"sub"));
 
