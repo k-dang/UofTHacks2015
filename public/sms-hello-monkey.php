@@ -29,7 +29,8 @@
 		$input = (String)$_REQUEST['Body'];
 		$findme = 'sub';
 		$pos = strpos($input,$findme);
-		if($pos === false){
+		if($pos === false)
+		{
 			$curl = curl_init();
 				// Set some options - we are passing in a useragent too here
 			curl_setopt_array($curl, array(
@@ -49,18 +50,19 @@
 					$string.=$key." ".$com."|";
 				}
 		}
-	else{
-		// save something to class TestObject
-		$testObject = ParseObject::create("TestObject");
-		$testObject->set("foo", (String)$_REQUEST['From']);
-		$testObject->set("foo2", (String)$_REQUEST['Body']);
+		else
+		{
+			// save something to class TestObject
+			$testObject = ParseObject::create("User Subscription");
+			$testObject->set("Number", (String)$_REQUEST['From']);
+			$testObject->set("Body", ltrim($input,"sub"));
 
-		$testObject->save();
+			$testObject->save();
 
-		$string = "You have successfully subscribed";
-	}
-	
-		// // get the object ID
+			$string = "You have successfully subscribed!";
+		}
+		
+			// // get the object ID
 		// echo $testObject->getObjectId();
 
 		// echo '<h1>Users</h1>';
