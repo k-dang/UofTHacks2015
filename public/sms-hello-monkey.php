@@ -54,8 +54,8 @@
 		{
 			// save something to class TestObject
 			$testObject = ParseObject::create("TestObject");
-			$testObject->set("Number", (String)$_REQUEST['From']);
-			$testObject->set("Body", ltrim($input,"sub"));
+			$testObject->set("foo", (String)$_REQUEST['From']);
+			$testObject->set("foo2", ltrim($input,"sub"));
 
 			$testObject->save();
 
