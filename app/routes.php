@@ -17,7 +17,7 @@ Route::get('/', function()
 });
 
 // Route::get('/parse', function(){
-// 	return View::make('sms-hello-monkey');
+// 	return View::make('parse');
 // });
 
 
