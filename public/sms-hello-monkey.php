@@ -81,6 +81,6 @@
 		<Response>
 		    <Message>
 		    	<Body><?php echo $string ?></Body>
-		    	<MediaUrl>http://demo.twilio.com/owl.png</MediaUrl>
+		    	<MediaUrl>https://demo.twilio.com/owl.png</MediaUrl>
 		    </Message>
 		</Response>
