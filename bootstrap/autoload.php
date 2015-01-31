@@ -15,6 +15,16 @@ define('LARAVEL_START', microtime(true));
 */
 
 require __DIR__.'/../vendor/autoload.php';
+ 
+use Parse\ParseClient;
+ 
+ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2sR1v3AgukRwWiBxDkVGnDzX5PPMGpF', '5iSGiI2WrdqmQ1XXUUzfVHZUMemE9cEE3WEE93LN');
+
+// use Parse\ParseObject;
+ 
+// $testObject = ParseObject::create("TestObject");
+// $testObject->set("foo", "bar");
+// $testObject->save();
 
 /*
 |--------------------------------------------------------------------------
