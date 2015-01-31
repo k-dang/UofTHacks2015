@@ -16,6 +16,8 @@
 
 	$results = json_decode($resp);
 
+	echo $results;
+
 
 ?>
 <Response>
