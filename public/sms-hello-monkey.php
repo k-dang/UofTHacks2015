@@ -26,7 +26,7 @@
 	// ParseClient::initialize('xxx', 'yyy', 'zzz');
 	ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2sR1v3AgukRwWiBxDkVGnDzX5PPMGpF', '5iSGiI2WrdqmQ1XXUUzfVHZUMemE9cEE3WEE93LN');
 
-		$input = (String)$_REQUEST['Body']);
+		$input = (String)$_REQUEST['Body'];
 		$findme = 'sub';
 		$pos = strpos($input,$findme);
 		if($pos === false){
@@ -41,7 +41,7 @@
 			$resp = curl_exec($curl);
 			// Close request to clear up some resources
 			curl_close($curl);
-					$results = json_decode($resp);
+				$results = json_decode($resp);
 
 				$string = "";
 				foreach ($results as $key => $com)
