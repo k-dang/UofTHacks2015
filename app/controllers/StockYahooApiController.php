@@ -41,8 +41,4 @@ class StockYahooApiController extends \BaseController {
 		// }
 
 
-		//return Response::json($pricesArray);
-	}
-
-
 }
