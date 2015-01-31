@@ -17,10 +17,8 @@
 	$results = json_decode($resp);
 
 	$string = "";
-	foreach ($com as $key => $results){
-		$string.=$key." ".$results."|";
-
-
+	foreach ($results as $key => $com){
+		$string.=$key." ".$com."|";
 	}
 
 	//echo $resp;
