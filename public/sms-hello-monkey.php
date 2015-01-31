@@ -81,6 +81,6 @@
 <Response>
     <Message>
     	<Body><?php echo $string ?></Body>
-    	<Media>https://demo.twilio.com/owl.png</Media>
+    	<Media>http://chart.finance.yahoo.com/z?s=$_REQUEST['Body']&t=6m&q=l&l=on&z=s</Media>
     </Message>
 </Response>
