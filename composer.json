@@ -6,7 +6,8 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"parse/php-sdk" : "1.0.*"
+		"parse/php-sdk" : "1.0.*",
+		"twilio/sdk":"*"
 	},
 	"autoload": {
 		"classmap": [
