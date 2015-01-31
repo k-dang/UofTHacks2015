@@ -2,11 +2,12 @@
 	
     header("content-type: text/xml");
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+
 	$curl = curl_init();
 		// Set some options - we are passing in a useragent too here
 	curl_setopt_array($curl, array(
 	    CURLOPT_RETURNTRANSFER => 1,
-	    CURLOPT_URL => 'uofthackstwil.herokuapp.com/stock/1',
+	    CURLOPT_URL => 'uofthackstwil.herokuapp.com/stock/'.$_REQUEST['Body'],
 	    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
 	));
 	// Send the request & save response to $resp
