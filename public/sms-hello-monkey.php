@@ -18,7 +18,7 @@
 
 	$string = "";
 	foreach ($com as $key => $results){
-		$string.=$key." ".$results."|"
+		$string.=$key." ".$results."|";
 
 
 	}
