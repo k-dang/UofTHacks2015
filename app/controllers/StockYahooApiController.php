@@ -29,7 +29,7 @@ class StockYahooApiController extends \BaseController {
 			// $i++;
 		}
 		
-		return Response::json($pricesArray);
+		return Response::json($pricesArray["GOOG"]);
 	}
 
 
