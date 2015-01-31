@@ -59,12 +59,12 @@ ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2s
 	//   // echo user Usernames
 	//   echo $result->get('username') . '<br/>';
 	// }
-	// 	$results = json_decode($resp);
+		$results = json_decode($resp);
 
-	// 	$string = "";
-	// 	foreach ($results as $key => $com){
-	// 		$string.=$key." ".$com."|";
-	// 	}
+	$string = "";
+	foreach ($results as $key => $com){
+		$string.=$key." ".$com."|";
+	}
 
 		//echo $resp;
 	?>
