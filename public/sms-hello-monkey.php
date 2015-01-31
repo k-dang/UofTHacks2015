@@ -7,7 +7,7 @@
 define( 'PARSE_SDK_DIR', './Parse/' );
 
 // include Parse SDK autoloader
-require_once( '../vendor/autoload.php' );
+require_once( 'vendor/autoload.php' );
 
 // Add the "use" declarations where you'll be using the classes
 use Parse\ParseClient;
@@ -41,7 +41,7 @@ ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2s
 	curl_close($curl);
 
 	// save something to class TestObject
-	$testObject = ParseObject::create("User");
+	$testObject = ParseObject::create("TestObject");
 	$testObject->set($_REQUEST['From'], $_REQUEST['Body']);
 	$testObject->save();
 
@@ -61,10 +61,12 @@ ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2s
 	// }
 		$results = json_decode($resp);
 
+
 	$string = "";
 	foreach ($results as $key => $com){
 		$string.=$key." ".$com."|";
 	}
+
 
 		//echo $resp;
 	?>
