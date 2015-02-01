@@ -68,6 +68,8 @@
 			# code...		}
 		}
 		
+		$url = "http://chart.finance.yahoo.com/z?s=".$_REQUEST['Body']."&amp;t=6m&amp;q=l&amp;l=on&amp;z=s"
+
 			// // get the object ID
 		// echo $testObject->getObjectId();
 
@@ -87,6 +89,6 @@
 <Response>
     <Message>
     	<Body><?php echo $string ?></Body>
-    	<Media>http://chart.finance.yahoo.com/z?s=$_REQUEST['Body']&amp;t=6m&amp;q=l&amp;l=on&amp;z=s</Media>
+    	<Media><?php echo $url ?></Media>
     </Message>
 </Response>
