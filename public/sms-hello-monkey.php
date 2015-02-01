@@ -86,6 +86,6 @@
 <Response>
     <Message>
     	<Body><?php echo $string ?></Body>
-    	<Media>http://i.imgur.com/c91AXTA.png</Media>
+    	<!-- <Media>http://i.imgur.com/c91AXTA.png</Media> -->
     </Message>
 </Response>
