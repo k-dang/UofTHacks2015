@@ -82,7 +82,7 @@
 		else
 		{	
 			$query = new ParseQuery("TestObject");
-			$query2 = $query2->equalTo("foo", (String)$_REQUEST['From']);
+			$query2 = $query->equalTo("foo", (String)$_REQUEST['From']);
 			$query3 = $query2->equalTo("foo2", ltrim((String)$_REQUEST['Body'],"Sub "));
 			$count = $query3->count();
 			if ($count >= 1){
