@@ -121,6 +121,6 @@
 <Response>
     <Message>
     	<Body><?php echo $string ?></Body>
-    	<?php if (!isset($url) || $url == "") {"<Media>".$url."</Media>"} ?>
+    	<?php if (!isset($url) || $url == "") { echo "<Media>".$url."</Media>";} ?>
     </Message>
 </Response>
