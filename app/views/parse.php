@@ -26,20 +26,28 @@ ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2s
 
 // save something to class TestObject
 $testObject = ParseObject::create("User");
-$testObject->set(280323404343, "bar");
+$testObject->set("foo", "bar");
 $testObject->save();
 
 // get the object ID
-echo $testObject->getObjectId();
+// echo $testObject->getObjectId();
 
 echo '<h1>Users</h1>';
+$query = new ParseQuery("TestObject");
+		$query->limit(10);
+		$results = $query->find();
 
-// get the first 10 users from built-in User class
-$query = new ParseQuery("_User");
-$query->limit(10);
-$results = $query->find();
+		foreach ( $results as $result ) {
+		  // echo user Usernames
+		  echo $result->get("foo2", "+19059735762") . '<br/>';
+		}
+// // get the first 10 users from built-in User class
+// $query = new ParseQuery("TestObject");
+// $query->limit(10);
+// $results = $query->find();
 
-foreach ( $results as $result ) {
-  // echo user Usernames
-  echo $result->get('username') . '<br/>';
-}
+// foreach ( $results as $result ) {
+//   // echo user Usernames
+//   echo $result->get('foo') . '<br/>';
+//   echo $result->get('foo2') . '<br/>';
+// }
