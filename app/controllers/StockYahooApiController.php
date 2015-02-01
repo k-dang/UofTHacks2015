@@ -58,7 +58,7 @@ class StockYahooApiController extends \BaseController {
 		// get the first 10 users from built-in User class
 		// return $phoneNum;
 		$query = new ParseQuery("TestObject");
-		$query->limit(10);
+		$query->equalTo("foo",(String)$phoneNum);
 		$results = $query->find();
 		$val = "";
 		foreach ( $results as $result ) {
