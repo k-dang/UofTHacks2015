@@ -63,13 +63,13 @@
 			// Close request to clear up some resources
 			curl_close($curl);
 				$results = json_decode($resp);
-				$string = $results;
-				// $string = "";
-				// foreach ($results as $key => $com)
-				// {
-				// 	$string.=$key." ".$com."|";
-				// }
-			// $value = $_REQUEST['Body'];
+				// $string = $results;
+				$string = "";
+				foreach ($results as $key => $com)
+				{
+					$string.=$key." ".$com."|";
+				}
+			$value = $_REQUEST['Body'];
 
 		}
 		else
