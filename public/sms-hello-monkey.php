@@ -29,7 +29,7 @@
 		$input = (String)$_REQUEST['Body'];
 		$findme = 'Sub ';
 		$pos = strpos($input,$findme);
-		if($_REQUEST['Body'] == 'Help' || $_REQUEST['Body'] == 'help' ){
+		if($_REQUEST['Body'] == 'Assist' || $_REQUEST['Body'] == 'assist' ){
 			$string = "Text a TICKER Number for the stock value | Text Sub TICKER to subscribe to that TICKER | Text Stocks for all your subscribed TICKERs";
 			$url = "http://www.clker.com/cliparts/9/1/4/0/11954322131712176739question_mark_naught101_02.svg.med.png";
 
