@@ -46,7 +46,7 @@
 				$string = "";
 				foreach ($results as $key => $com)
 				{
-					$string.=$key." ".$com." | ";
+					$string.=$key." ".$com."|";
 				}
 		}
 		elseif($pos === false)
@@ -67,7 +67,7 @@
 				$string = "";
 				foreach ($results as $key => $com)
 				{
-					$string.=$key." ".$com;
+					$string.=$key." ".$com."|";
 				}
 			$value = $_REQUEST['Body'];
 
