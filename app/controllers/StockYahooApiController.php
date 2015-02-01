@@ -39,6 +39,25 @@ class StockYahooApiController extends \BaseController {
 
 		// 	// $i++;
 		// }
-}
+	}
+
+	public function getSubs($phoneNum){
+		//get the stocks
+		//getStockPrice(stocks)
+
+		// get the first 10 users from built-in User class
+		$query = new ParseQuery("TestObject");
+		$query->limit(10);
+		$results = $query->find();
+
+		foreach ( $results as $result ) {
+		  // echo user Usernames
+		  echo $result->get("foo2", (String)$phoneNum) . '<br/>';
+		  // echo $result->get('foo') . '<br/>';
+		  // echo $result->get('foo2') . '<br/>';
+		}
+	}
+
+
 
 }

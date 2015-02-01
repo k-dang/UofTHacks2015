@@ -29,6 +29,7 @@
 		$input = (String)$_REQUEST['Body'];
 		$findme = 'sub';
 		$pos = strpos($input,$findme);
+		//
 		if($pos === false)
 		{
 			$curl = curl_init();
