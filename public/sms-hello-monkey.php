@@ -80,7 +80,7 @@
 			$query = new ParseQuery("TestObject");
 			$query->equalTo("foo", (String)$_REQUEST['From']);
 			$count = $query->count();
-			if (count >= 1){
+			if ($count >= 1){
 				$string = "You have already subbed";
 			}else{
 
