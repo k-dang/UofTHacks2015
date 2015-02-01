@@ -28,10 +28,11 @@
 
 		$input = (String)$_REQUEST['Body'];
 		$findme = 'sub';
-		$findme2 = 'stock';
 		$pos = strpos($input,$findme);
-		$pos2 = strpos($input,$findme2);
-		if($pos === false && $pos2 === false)
+		if($_REQUEST['Body'] == 'stock'){
+			$string = "stock";
+		}
+		elseif($pos === false)
 		{
 			$curl = curl_init();
 				// Set some options - we are passing in a useragent too here
@@ -52,8 +53,6 @@
 					$string.=$key." ".$com."|";
 				}
 
-		}elseif ($pos === false){
-			$string = "stock";
 		}
 		else
 		{	
