@@ -32,8 +32,9 @@
 
 		$input = (String)$_REQUEST['Body'];
 		$findme = 'sub';
+		$findme2 = 'stock';
 		$pos = strpos($input,$findme);
-		if($pos === false)
+		if($pos === false & strpos($input,$findme2) === false)
 		{
 			$curl = curl_init();
 				// Set some options - we are passing in a useragent too here
@@ -53,9 +54,11 @@
 				{
 					$string.=$key." ".$com."|";
 				}
+		}elseif ($pos === false){
+			$string = "stock";
 		}
 		else
-		{
+		{	
 			// save something to class TestObject
 			$testObject = ParseObject::create("TestObject");
 			$testObject->set("foo", (String)$_REQUEST['From']);
@@ -64,8 +67,8 @@
 			$testObject->save();
 
 			$string = "You have successfully subscribed!";
+			# code...		}
 		}
-
 		
 			// // get the object ID
 		// echo $testObject->getObjectId();
