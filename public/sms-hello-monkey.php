@@ -89,6 +89,6 @@
 <Response>
     <Message>
     	<Body><?php echo $string ?></Body>
-    	<Media>$arrpic->RY</Media>
+    	<Media>http://i.imgur.com/c91AXTA.png</Media>
     </Message>
 </Response>
