@@ -31,8 +31,7 @@
 		$pos = strpos($input,$findme);
 		if($_REQUEST['Body'] == 'Assist' || $_REQUEST['Body'] == 'assist' ){
 			$string = "Text a TICKER Number for the stock value | Text Sub TICKER to subscribe to that TICKER | Text Stocks for all your subscribed TICKERs";
-			$url = "http://www.clker.com/cliparts/9/1/4/0/11954322131712176739question_mark_naught101_02.svg.med.png";
-
+			$url = "";
 		}
 		elseif($_REQUEST['Body'] == 'Stocks'){
 			//$string = "stock";
@@ -53,7 +52,7 @@
 				{
 					$string.=$key." ".$com." | ";
 				}
-			$url = "http://resourceinvestingnews.com/files/the-top-5-high-volume-trading-stocks-of-the-week_1118_437849_0_14042581_500.jpg";
+			$url = "";
 		}
 		elseif($pos === false)
 		{
@@ -99,7 +98,7 @@
 			$string = "You have successfully subscribed!";
 			# code...		}
 			}
-		$url = "http://www.buzzle.com/images/cliparts/smiley-thumbs-up.jpg";
+		$url = "";
 		}
 		
 
@@ -122,6 +121,6 @@
 <Response>
     <Message>
     	<Body><?php echo $string ?></Body>
-    	<Media><?php echo $url ?></Media>
+    	<?php if (!isset($url) || $url == "") {"<Media>".$url."</Media>"} ?>
     </Message>
 </Response>
