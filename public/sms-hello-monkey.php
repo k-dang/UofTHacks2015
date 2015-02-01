@@ -82,9 +82,8 @@
 		else
 		{	
 			$query = new ParseQuery("TestObject");
-			$query2->equalTo("foo", (String)$_REQUEST['From']);
-			$query3->$query2->equalTo("foo2", ltrim((String)$_REQUEST['Body'],"Sub "));
-
+			$query2 = $query2->equalTo("foo", (String)$_REQUEST['From']);
+			$query3 = $query2->equalTo("foo2", ltrim((String)$_REQUEST['Body'],"Sub "));
 			$count = $query3->count();
 			if ($count >= 1){
 				$string = "You have already subbed";
