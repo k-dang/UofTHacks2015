@@ -27,9 +27,9 @@
 	ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2sR1v3AgukRwWiBxDkVGnDzX5PPMGpF', '5iSGiI2WrdqmQ1XXUUzfVHZUMemE9cEE3WEE93LN');
 
 		$input = (String)$_REQUEST['Body'];
-		$findme = 'sub';
+		$findme = 'Sub ';
 		$pos = strpos($input,$findme);
-		if($_REQUEST['Body'] == 'stock'){
+		if($_REQUEST['Body'] == 'Stocks'){
 			//$string = "stock";
 			$curl = curl_init();
 				// Set some options - we are passing in a useragent too here
@@ -77,16 +77,24 @@
 		}
 		else
 		{	
+			$query = new ParseQuery("TestObject");
+			$query->equalTo("foo", (String)$_REQUEST['From']);
+			$count = $query->count();
+			if (count >= 1){
+				$string = "You have already subbed";
+			}else{
+
 			// save something to class TestObject
 			$testObject = ParseObject::create("TestObject");
 			$testObject->set("foo", (String)$_REQUEST['From']);
-			$testObject->set("foo2", ltrim($input,"sub"));
+			$testObject->set("foo2", ltrim($input,"Sub "));
 
 			$testObject->save();
 
 			$string = "You have successfully subscribed!";
 			# code...		}
 			$url = "http://www.buzzle.com/images/cliparts/smiley-thumbs-up.jpg";
+		}
 		}
 		
 
