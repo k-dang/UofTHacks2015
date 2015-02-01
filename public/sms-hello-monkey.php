@@ -25,6 +25,10 @@
 	// Init parse: app_id, rest_key, master_key
 	// ParseClient::initialize('xxx', 'yyy', 'zzz');
 	ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2sR1v3AgukRwWiBxDkVGnDzX5PPMGpF', '5iSGiI2WrdqmQ1XXUUzfVHZUMemE9cEE3WEE93LN');
+		$arrpic = $(
+			"RY" => "http://i.imgur.com/c91AXTA.png",
+		);
+
 
 		$input = (String)$_REQUEST['Body'];
 		$findme = 'sub';
@@ -61,6 +65,7 @@
 
 			$string = "You have successfully subscribed!";
 		}
+
 		
 			// // get the object ID
 		// echo $testObject->getObjectId();
@@ -81,6 +86,6 @@
 <Response>
     <Message>
     	<Body><?php echo $string ?></Body>
-    	<Media>http://i.imgur.com/c91AXTA.png</Media>
+    	<Media>$arrpic->RY</Media>
     </Message>
 </Response>
