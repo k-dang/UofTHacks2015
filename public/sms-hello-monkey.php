@@ -72,7 +72,7 @@
 					$string.=$key." ".$com."|";
 				}
 			$value = $_REQUEST['Body'];
-			$url ="";
+			$url = "http://chart.finance.yahoo.com/z?s=".$_REQUEST['Body']."&amp;t=6m&amp;q=l&amp;l=on&amp;z=s";
 
 		}
 		else
@@ -85,10 +85,11 @@
 			$testObject->save();
 
 			$string = "You have successfully subscribed!";
+			$url = "";
 			# code...		}
 		}
 		
-		$url = "http://chart.finance.yahoo.com/z?s=".$_REQUEST['Body']."&amp;t=6m&amp;q=l&amp;l=on&amp;z=s"
+		
 
 			// // get the object ID
 		// echo $testObject->getObjectId();
