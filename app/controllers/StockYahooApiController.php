@@ -37,18 +37,18 @@ class StockYahooApiController extends \BaseController {
 		$companyArray = $results->query->results->quote->Symbol;
 		$companyPrice = $results->query->results->quote->LastTradePriceOnly;
 		// $resp = $companyArray . " " . " " . $companyPrice;
-		return Response::json([$companyArray=>$companyPrice]);
+		// return Response::json([$companyArray=>$companyPrice]);
 
 
-		// $pricesArray = array();
+		$pricesArray = array();
 
-		// // $i = 0;
-		// foreach ($companyArray as $company) {
-		// 	$pricesArray[$company->Symbol] = $company->LastTradePriceOnly;
-		// 	return Response::json($pricesArray);
+		// $i = 0;
+		foreach ($companyArray as $company) {
+			$pricesArray[$company->Symbol] = $company->LastTradePriceOnly;
+			return Response::json($pricesArray);
 
-		// 	// $i++;
-		// }
+			// $i++;
+		}
 	}
 
 	public function getSubs($phoneNum){
