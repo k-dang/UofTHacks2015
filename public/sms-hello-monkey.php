@@ -25,16 +25,13 @@
 	// Init parse: app_id, rest_key, master_key
 	// ParseClient::initialize('xxx', 'yyy', 'zzz');
 	ParseClient::initialize('xqzKtcoFExd5PfOuaYgxMJRd2X6BaZu2asTr66QS', '9anpllqCv2sR1v3AgukRwWiBxDkVGnDzX5PPMGpF', '5iSGiI2WrdqmQ1XXUUzfVHZUMemE9cEE3WEE93LN');
-		$arrpic = $(
-			"RY" => "http://i.imgur.com/c91AXTA.png",
-		);
-
 
 		$input = (String)$_REQUEST['Body'];
 		$findme = 'sub';
 		$findme2 = 'stock';
 		$pos = strpos($input,$findme);
-		if($pos === false & strpos($input,$findme2) === false)
+		$pos2 = strpos($input,$findme2);
+		if($pos === false && $pos2 === false)
 		{
 			$curl = curl_init();
 				// Set some options - we are passing in a useragent too here
@@ -54,6 +51,7 @@
 				{
 					$string.=$key." ".$com."|";
 				}
+
 		}elseif ($pos === false){
 			$string = "stock";
 		}
