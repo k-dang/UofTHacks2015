@@ -38,8 +38,8 @@ $query = new ParseQuery("TestObject");
 		$results = $query->find();
 		foreach ( $results as $result ) {
 		  // echo user Usernames
-		  $val =  "'" . $result->get("foo2", "+19059735762") . "'";
-		  // echo $val;
+		  $val =  "'" . $result->get("foo2", "+19059735762") . "',";
+		  echo $val;
 		}
 
 // // get the first 10 users from built-in User class

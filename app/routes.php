@@ -23,3 +23,4 @@ Route::get('/parse', function(){
 
 Route::get('stock/{ids}', 'StockYahooApiController@getStockPrice');
 
+Route::get('user/{phoneNum}', 'StockYahooApiController@getSubs');
