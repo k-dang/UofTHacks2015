@@ -34,7 +34,7 @@ class StockYahooApiController extends \BaseController {
 		curl_close($curl);
 
 		$results = json_decode($resp);
-		return $results;
+		// return $results;
 		$companyArray = $results->query->results->quote->Symbol;
 		$companyPrice = $results->query->results->quote->LastTradePriceOnly;
 		// $resp = $companyArray . " " . " " . $companyPrice;
