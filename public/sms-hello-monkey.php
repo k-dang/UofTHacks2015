@@ -86,6 +86,6 @@
 <Response>
     <Message>
     	<Body><?php echo $string ?></Body>
-    	<Media>http://chart.finance.yahoo.com/z?s=GOOG&t=6m&q=l&l=on&z=s</Media>
+    	<Media>http://chart.finance.yahoo.com/z?s=GOOG&amp;t=6m&amp;q=l&amp;l=on&amp;z=s</Media>
     </Message>
 </Response>
