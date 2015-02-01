@@ -49,6 +49,7 @@
 				{
 					$string.=$key." ".$com."|";
 				}
+				$url ="";
 		}
 		elseif($pos === false)
 		{
@@ -71,6 +72,7 @@
 					$string.=$key." ".$com."|";
 				}
 			$value = $_REQUEST['Body'];
+			$url ="";
 
 		}
 		else
