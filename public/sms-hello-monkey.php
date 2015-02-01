@@ -48,6 +48,7 @@
 				{
 					$string.=$key." ".$com." | ";
 				}
+			$url = "http://resourceinvestingnews.com/files/the-top-5-high-volume-trading-stocks-of-the-week_1118_437849_0_14042581_500.jpg"
 		}
 		elseif($pos === false)
 		{
@@ -71,6 +72,8 @@
 				}
 			$value = $_REQUEST['Body'];
 
+			$url = "http://chart.finance.yahoo.com/z?s=".$_REQUEST['Body']."&amp;t=6m&amp;q=l&amp;l=on&amp;z=s";
+
 		}
 		else
 		{	
@@ -83,9 +86,9 @@
 
 			$string = "You have successfully subscribed!";
 			# code...		}
+			$url = "http://www.buzzle.com/images/cliparts/smiley-thumbs-up.jpg"
 		}
 		
-		$url = "http://chart.finance.yahoo.com/z?s=".$_REQUEST['Body']."&amp;t=6m&amp;q=l&amp;l=on&amp;z=s";
 
 			// // get the object ID
 		// echo $testObject->getObjectId();
