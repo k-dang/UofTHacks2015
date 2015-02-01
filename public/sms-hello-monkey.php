@@ -93,8 +93,8 @@
 
 			$string = "You have successfully subscribed!";
 			# code...		}
-			$url = "http://www.buzzle.com/images/cliparts/smiley-thumbs-up.jpg";
-		}
+			}
+		$url = "http://www.buzzle.com/images/cliparts/smiley-thumbs-up.jpg";
 		}
 		
 
