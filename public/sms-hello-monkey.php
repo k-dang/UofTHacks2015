@@ -35,7 +35,7 @@
 				// Set some options - we are passing in a useragent too here
 			curl_setopt_array($curl, array(
 			    CURLOPT_RETURNTRANSFER => 1,
-			    CURLOPT_URL => 'twilliohack.herokuapp.com/user/'.$_REQUEST['From'],
+			    CURLOPT_URL => 'uofthackstwil.herokuapp.com/user/'.$_REQUEST['From'],
 			    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
 			));
 			// Send the request & save response to $resp
@@ -55,7 +55,7 @@
 				// Set some options - we are passing in a useragent too here
 			curl_setopt_array($curl, array(
 			    CURLOPT_RETURNTRANSFER => 1,
-			    CURLOPT_URL => 'twilliohack.herokuapp.com/stock/'.$_REQUEST['Body'],
+			    CURLOPT_URL => 'uofthackstwil.herokuapp.com/stock/'.$_REQUEST['Body'],
 			    CURLOPT_USERAGENT => 'Codular Sample cURL Request'
 			));
 			// Send the request & save response to $resp
