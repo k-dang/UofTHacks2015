@@ -48,7 +48,7 @@
 				{
 					$string.=$key." ".$com." | ";
 				}
-			$url = "http://resourceinvestingnews.com/files/the-top-5-high-volume-trading-stocks-of-the-week_1118_437849_0_14042581_500.jpg"
+			$url = "http://resourceinvestingnews.com/files/the-top-5-high-volume-trading-stocks-of-the-week_1118_437849_0_14042581_500.jpg";
 		}
 		elseif($pos === false)
 		{
@@ -86,7 +86,7 @@
 
 			$string = "You have successfully subscribed!";
 			# code...		}
-			$url = "http://www.buzzle.com/images/cliparts/smiley-thumbs-up.jpg"
+			$url = "http://www.buzzle.com/images/cliparts/smiley-thumbs-up.jpg";
 		}
 		
 
