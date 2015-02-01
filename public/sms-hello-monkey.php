@@ -52,7 +52,7 @@
 				{
 					$string.=$key." ".$com."|";
 				}
-			$value = $_REQUEST['Body'];
+			// $value = $_REQUEST['Body'];
 
 		}
 		else
