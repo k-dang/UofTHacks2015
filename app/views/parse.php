@@ -36,11 +36,12 @@ echo '<h1>Users</h1>';
 $query = new ParseQuery("TestObject");
 		$query->limit(10);
 		$results = $query->find();
-
 		foreach ( $results as $result ) {
 		  // echo user Usernames
-		  echo $result->get("foo2", "+19059735762") . '<br/>';
+		  $val =  "'" . $result->get("foo2", "+19059735762") . "'";
+		  // echo $val;
 		}
+
 // // get the first 10 users from built-in User class
 // $query = new ParseQuery("TestObject");
 // $query->limit(10);
